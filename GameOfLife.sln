@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{15EC7B51
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gameoflife.core.tests", "tests\gameoflife.core.tests\gameoflife.core.tests.csproj", "{BF8FBE44-DC67-4885-9BFD-2FFB644B26E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gameoflife.host", "src\gameoflife.host\gameoflife.host.csproj", "{59942187-7CA7-400A-B0E1-F673DF4E939B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{BF8FBE44-DC67-4885-9BFD-2FFB644B26E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF8FBE44-DC67-4885-9BFD-2FFB644B26E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8FBE44-DC67-4885-9BFD-2FFB644B26E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59942187-7CA7-400A-B0E1-F673DF4E939B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59942187-7CA7-400A-B0E1-F673DF4E939B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59942187-7CA7-400A-B0E1-F673DF4E939B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59942187-7CA7-400A-B0E1-F673DF4E939B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4B9152B0-61DE-4765-9553-F70A9172853D} = {5A02F668-F6C5-4EB7-90A5-7B04D08E3C69}
 		{BF8FBE44-DC67-4885-9BFD-2FFB644B26E2} = {15EC7B51-F0D4-428D-B85D-1D21323EC395}
+		{59942187-7CA7-400A-B0E1-F673DF4E939B} = {5A02F668-F6C5-4EB7-90A5-7B04D08E3C69}
 	EndGlobalSection
 EndGlobal
