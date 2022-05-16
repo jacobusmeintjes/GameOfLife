@@ -10,6 +10,13 @@ public class Cell
 
     public CellState NextState(int neighbours)
     {
+        if (State == CellState.Alive)
+        {
+            if (neighbours == 2 || neighbours == 3)
+            {
+                return CellState.Alive;
+            }
+        }
         return CellState.Dead;
     }
 }
