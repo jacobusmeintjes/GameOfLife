@@ -29,5 +29,20 @@ public class GridShould
         {
             cell.Should().NotBeNull();
         }
+
+        var currentState = grid.Cells[0, 0].State;
+        for (var row = 0; row < grid.Rows; row++)
+        {
+            for (var column = 0; column < grid.Columns; column++)
+            {
+                if (currentState != grid.Cells[row, column].State)
+                {
+                    currentState = grid.Cells[row, column].State;
+                    break;
+                }
+            }
+        }
+
+        currentState.Should().NotBe(grid.Cells[0, 0].State);
     }
 }
