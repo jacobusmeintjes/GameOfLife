@@ -48,4 +48,24 @@ public class GridShould
 
         stateChanged.Should().BeTrue();
     }
+    
+    [Fact]
+    public void DisplayInitializedWithRowsAndColumnsAndRandomizeCellState()
+    {
+        var grid = new Grid(4, 8);
+
+        grid.ToString().Should().NotBeNullOrEmpty();
+    }
+    
+    [Fact]
+    public void DisplayInitializedGridAndCompareWithFirstStateChange()
+    {
+        var grid = new Grid(4, 8);
+
+        var gridState = grid.ToString();
+
+        grid.ExecuteNextState();
+        
+        grid.ToString().Should().NotBe(gridState);
+    }
 }

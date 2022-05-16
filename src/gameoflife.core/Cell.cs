@@ -8,6 +8,11 @@ public class Cell
         State = state;
     }
 
+    public void SetNextState(CellState state)
+    {
+        State = state;
+    }
+
     public CellState NextState(int neighbours)
     {
         if (State == CellState.Alive)
