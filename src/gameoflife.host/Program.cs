@@ -6,7 +6,7 @@ Console.WriteLine("Hello, World!");
 
 int defaultRows = 4, defaultColumns = 4;
 
-if (!string.IsNullOrEmpty(args[0]) && !string.IsNullOrEmpty(args[1]))
+if (args.Length == 2 && !string.IsNullOrEmpty(args[0]) && !string.IsNullOrEmpty(args[1]))
 {
     if (int.TryParse(args[0], out var rows) && int.TryParse(args[1], out var cols))
     {
