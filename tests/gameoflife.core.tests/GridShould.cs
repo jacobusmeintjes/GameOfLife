@@ -30,6 +30,7 @@ public class GridShould
             cell.Should().NotBeNull();
         }
 
+        var stateChanged = false;
         var currentState = grid.Cells[0, 0].State;
         for (var row = 0; row < grid.Rows; row++)
         {
@@ -37,12 +38,14 @@ public class GridShould
             {
                 if (currentState != grid.Cells[row, column].State)
                 {
-                    currentState = grid.Cells[row, column].State;
+                    stateChanged = true;
                     break;
                 }
             }
+
+            if (stateChanged) break;
         }
 
-        currentState.Should().NotBe(grid.Cells[0, 0].State);
+        stateChanged.Should().BeTrue();
     }
 }

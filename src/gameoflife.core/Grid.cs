@@ -22,7 +22,14 @@ public class Grid
         {
             for (var column = 0; column < Columns; column++)
             {
-                Cells[row, column] = new Cell(CellState.Alive);
+                var cellState = CellState.Dead;
+                var state = new Random().Next(100);
+                if (state > 50)
+                {
+                    cellState = CellState.Alive;
+                }
+                
+                Cells[row, column] = new Cell(cellState);
             }
         }
     }
