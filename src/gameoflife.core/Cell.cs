@@ -7,4 +7,9 @@ public class Cell
     {
         State = state;
     }
+
+    public CellState NextState(int neighbours)
+    {
+        return CellState.Dead;
+    }
 }
