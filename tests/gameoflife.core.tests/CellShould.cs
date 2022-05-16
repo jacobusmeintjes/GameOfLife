@@ -24,4 +24,12 @@ public class CellShould
         var aliveCellWithOneNeighbour = new Cell(CellState.Alive);
         aliveCellWithOneNeighbour.NextState(1).Should().Be(CellState.Dead);
     }
+    
+    
+    [Fact]
+    public void DieFromOvercrowdingIfMoreThanThreeLiveNeighbours()
+    {
+        var aliveCellWithThreeNeighbours = new Cell(CellState.Alive);
+        aliveCellWithThreeNeighbours.NextState(4).Should().Be(CellState.Dead);
+    }
 }
