@@ -42,4 +42,14 @@ public class CellShould
         var aliveCellWithThreeNeighbours = new Cell(CellState.Alive);
         aliveCellWithThreeNeighbours.NextState(3).Should().Be(CellState.Alive);
     }
+    
+    [Fact]
+    public void BecomeAliveIfItHasThreeLiveNeighbours()
+    {
+        var deadCellWithTwoLiveNeighbours = new Cell(CellState.Dead);
+        deadCellWithTwoLiveNeighbours.NextState(2).Should().Be(CellState.Dead);
+
+        var deadCellWithThreeLiveNeighbours = new Cell(CellState.Dead);
+        deadCellWithThreeLiveNeighbours.NextState(3).Should().Be(CellState.Alive);
+    }
 }
