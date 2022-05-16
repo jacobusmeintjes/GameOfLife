@@ -17,6 +17,12 @@ public class Cell
                 return CellState.Alive;
             }
         }
+
+        if (State == CellState.Dead && neighbours == 3)
+        {
+            return CellState.Alive;
+        }
+        
         return CellState.Dead;
     }
 }
